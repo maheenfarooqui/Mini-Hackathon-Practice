@@ -1,0 +1,128 @@
+.shop-hero {
+    position: relative;
+    background: url('assetes/Rectangle\ 1.png') no-repeat center center;
+    background-size: cover;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+  }
+
+  .hero-content h1 {
+    font-size: 48px;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 10px;
+  }
+
+  .breadcrumb-custom {
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  .breadcrumb-custom span.home {
+    font-weight: 700;
+    color: #000;
+  }
+
+  .breadcrumb-custom span.separator {
+    margin: 0 10px;
+    color: #000;
+  }
+
+  .breadcrumb-custom span.current {
+    font-weight: 300;
+    color: #000;
+  }
+  .filter-bar {
+    background-color: #F9F1E7; /* Aapka bataya hua color */
+    padding: 25px 0;
+    margin-bottom: 50px;
+  }
+
+  .filter-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .filter-text {
+    font-size: 20px;
+    font-weight: 500;
+    margin-right: 15px;
+  }
+
+  .vertical-line {
+    border-left: 2px solid #9F9F9F;
+    height: 30px;
+    margin: 0 20px;
+  }
+
+  .showing-text {
+    font-size: 16px;
+    color: #000;
+  }
+
+  /* Right Side Styling */
+  .filter-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .sort-label {
+    font-size: 18px;
+  }
+
+  .white-box {
+    background-color: #fff;
+    padding: 10px 18px;
+    color: #9F9F9F;
+    font-size: 16px;
+    border: none;
+    border-radius: 2px;
+  }
+  .pagination-wrapper {
+    margin: 40px 0 80px 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Boxes ke darmiyan gap */
+  }
+
+  .page-box {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #000;
+    font-size: 20px;
+    font-weight: 400;
+    border-radius: 10px;
+    background-color: #F9F1E7; /* Default background color */
+    transition: 0.3s;
+  }
+
+  /* Active Page Box */
+  .page-box.active {
+    background-color: #B88E2F; /* Aapka bataya hua active color */
+    color: #fff;
+  }
+
+  /* Next Button (Thora wide box) */
+  .page-box.next {
+    width: 98px;
+    font-weight: 300;
+  }
+
+  .page-box:hover:not(.active) {
+    background-color: #e2d5c5;
+    color: #000;
+  }
