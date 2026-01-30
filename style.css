@@ -1,273 +1,431 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
-.color{
-    color: black !important;
+.color {
+  color: black !important;
 }
 .hero-section {
-    background: url('assetes/scandinavian-interior-mockup-wall-decal-background\ 1.png') no-repeat center center;
-    background-size: cover;
-    min-height: 80vh; 
-    display: flex;
-    align-items: center;
+  background: url("assetes/scandinavian-interior-mockup-wall-decal-background\ 1.png")
+    no-repeat center center;
+  background-size: cover;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+}
+
+.arrival-box {
+  background-color: #fff3e3;
+  padding: 50px;
+  border-radius: 10px;
+  max-width: 550px;
+}
+
+.small-heading {
+  letter-spacing: 2px;
+  font-weight: 600;
+  font-size: 14px;
+  color: #333;
+}
+
+.big-heading {
+  color: #b88e2f; /* Goldish tone for e-commerce feel */
+  font-size: 2.5rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin: 15px 0;
+}
+
+.hero-btn {
+  background-color: #b88e2f !important;
+  color: white !important;
+  padding: 15px 40px 15px 40px !important;
+  border: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-top: 20px;
+  transition: 0.3s;
+}
+
+.hero-btn:hover {
+  background-color: #96732a;
+  color: white;
+}
+.category-section {
+  padding: 60px 0;
+  text-align: center;
+}
+
+.category-title {
+  font-weight: 800;
+  color: #000;
+  margin-bottom: 5px;
+}
+
+.category-subtitle {
+  color: #666;
+  margin-bottom: 40px;
+}
+
+.category-card {
+  border: none;
+  transition: transform 0.3s ease;
+}
+
+.category-card:hover {
+  transform: translateY(-10px); /* Hover par thora sa upar move hoga */
+}
+
+.category-img {
+  border-radius: 10px;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.category-text {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #333;
+  margin-top: 15px;
+}
+.product-card {
+  position: relative;
+  background: #f4f5f7;
+  border: none;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+/* Discount Badge */
+.discount-badge {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: #e97171;
+  color: white;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  z-index: 2;
+}
+
+/* Hover Overlay */
+.product-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(58, 58, 58, 0.7); /* Dim background */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: 0.3s;
+  z-index: 3;
+}
+
+.product-card:hover .product-overlay {
+  opacity: 1;
+}
+
+.white-btn {
+  background: white !important;
+  color: #b88e2f !important;
+  border: none;
+  padding: 10px 40px !important;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.cl {
+  background-color: #2ec1ac !important;
+}
+
+.overlay-icons a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.overlay-icons img {
+  width: 16px;
+  margin-right: 5px;
+  filter: brightness(0) invert(1); /* Icons ko white karne ke liye */
+}
+
+/* Content Styling */
+.product-info {
+  padding: 15px;
+}
+
+.p-name {
+  font-size: 20px;
+  font-weight: 700;
+  color: #3a3a3a;
+  margin-bottom: 5px;
+}
+.p-desc {
+  font-size: 14px;
+  color: #898989;
+  margin-bottom: 8px;
+}
+.p-price {
+  font-size: 18px;
+  font-weight: 600;
+  color: #3a3a3a;
+}
+.p-old-price {
+  font-size: 14px;
+  color: #b0b0b0;
+  text-decoration: line-through;
+  margin-left: 10px;
+}
+.inspiration-section {
+  background-color: #fcf8f3; /* Aapka bataya hua color */
+  padding: 80px 0;
+  color: black;
+  overflow: hidden;
+}
+
+.inspire-title {
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.inspire-btn {
+  background-color: #b88e2f !important;
+  color: white !important;
+  border: none;
+  padding: 12px 35px;
+  font-weight: 600;
+  margin-top: 25px;
+  transition: 0.3s;
+}
+
+/* Right Side Image Layout */
+.img-wrapper {
+  position: relative;
+}
+
+.main-inspire-img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+}
+
+/* Floating Box on Image */
+.info-box {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 25px;
+  color: #333;
+  display: flex;
+  align-items: flex-end;
+}
+
+.info-content p {
+  margin: 0;
+  font-size: 14px;
+  color: #616161;
+}
+
+.info-content h4 {
+  font-weight: 700;
+  margin: 5px 0 0 0;
+}
+
+.arrow-box {
+  background-color: #b88e2f;
+  color: white;
+  padding: 10px 15px;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+/* Slider Dots */
+.slider-dots {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #d8d8d8;
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: #b88e2f;
+  border: 2px solid white;
+  outline: 1px solid #b88e2f;
+}
+
+.next-img-preview {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  opacity: 0.7;
+}
+.setup-section {
+  padding: 60px 0;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+.setup-small-text {
+  color: #616161;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+.setup-heading {
+  color:black;
+  font-size: 32px;
+  font-weight: 800;
+  margin-bottom: 40px;
+}
+
+/* Main Flex Container */
+.gallery-flex {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  align-items: center; /* Center alignment for the whole row */
+  flex-wrap: nowrap;
+}
+
+/* Har column ki styling */
+.gallery-col {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  flex: 1;
+}
+
+.gallery-img-container img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  transition: 0.3s;
+}
+
+/* Alignments as per screenshot */
+.align-bottom {
+  justify-content: flex-end;
+} /* Left side images often align bottom */
+.align-top {
+  justify-content: flex-start;
+} /* Right side often align top */
+.center-img {
+  height: 300px;
+  object-fit: cover;
+} /* Middle image is usually big */
+.main-footer {
+    padding: 80px 0 30px 0;
+    border-top: 1px solid #D8D8D8;
+    background-color: #fff;
   }
 
-  .arrival-box {
-    background-color: #FFF3E3;
-    padding: 50px;
-    border-radius: 10px;
-    max-width: 550px;
-  }
-
-  .small-heading {
-    letter-spacing: 2px;
-    font-weight: 600;
-    font-size: 14px;
-    color: #333;
-  }
-
-  .big-heading {
-    color: #B88E2F; /* Goldish tone for e-commerce feel */
-    font-size: 2.5rem;
+  .footer-brand {
+    font-size: 24px;
     font-weight: 800;
-    line-height: 1.2;
-    margin: 15px 0;
-  }
-
-  .hero-btn {
-    background-color: #B88E2F !important;
-    color: white !important;
-    padding: 15px 40px 15px 40px !important;
-    border: none;
-    text-transform: uppercase;
-    font-weight: bold;
-    margin-top: 20px;
-    transition: 0.3s;
-  }
-
-  .hero-btn:hover {
-    background-color: #96732a;
-    color: white;
-  }
-  .category-section {
-    padding: 60px 0;
-    text-align: center;
-  }
-  
-  .category-title {
-    font-weight: 800;
+    margin-bottom: 30px;
     color: #000;
-    margin-bottom: 5px;
   }
 
-  .category-subtitle {
-    color: #666;
+  .footer-address {
+    color: #9F9F9F;
+    font-size: 16px;
+    line-height: 1.5;
+    max-width: 250px;
+  }
+
+  .footer-heading {
+    color: #9F9F9F;
+    font-size: 16px;
+    font-weight: 500;
     margin-bottom: 40px;
   }
 
-  .category-card {
-    border: none;
-    transition: transform 0.3s ease;
+  .footer-links {
+    list-style: none;
+    padding: 0;
   }
 
-  .category-card:hover {
-    transform: translateY(-10px); /* Hover par thora sa upar move hoga */
+  .footer-links li {
+    margin-bottom: 30px;
   }
 
-  .category-img {
-    border-radius: 10px;
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-  }
-
-  .category-text {
-    font-weight: 700;
-    font-size: 1.2rem;
-    color: #333;
-    margin-top: 15px;
-  }
-  .product-card {
-    position: relative;
-    background: #F4F5F7;
-    border: none;
-    overflow: hidden;
-    transition: 0.3s;
-  }
-
-  /* Discount Badge */
-  .discount-badge {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    background-color: #E97171;
-    color: white;
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 12px;
-    z-index: 2;
-  }
-
-  /* Hover Overlay */
-  .product-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(58, 58, 58, 0.7); /* Dim background */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    transition: 0.3s;
-    z-index: 3;
-  }
-
-  .product-card:hover .product-overlay {
-    opacity: 1;
-  }
-
-  .white-btn {
-    background: white !important;
-    color: #B88E2F !important;
-    border: none;
-    padding: 10px 40px !important;
-    font-weight: 600;
-    margin-bottom: 20px;
-  }
-  .cl{
-    background-color: #2EC1AC !important;
-  
-  }
-
-  .overlay-icons a {
-    color: white;
+  .footer-links a {
     text-decoration: none;
-    margin: 0 10px;
-    font-size: 14px;
-    font-weight: 500;
-  }
-
-  .overlay-icons img {
-    width: 16px;
-    margin-right: 5px;
-    filter: brightness(0) invert(1); /* Icons ko white karne ke liye */
-  }
-
-  /* Content Styling */
-  .product-info {
-    padding: 15px;
-  }
-
-  .p-name { font-size: 20px; font-weight: 700; color: #3A3A3A; margin-bottom: 5px; }
-  .p-desc { font-size: 14px; color: #898989; margin-bottom: 8px; }
-  .p-price { font-size: 18px; font-weight: 600; color: #3A3A3A; }
-  .p-old-price { font-size: 14px; color: #B0B0B0; text-decoration: line-through; margin-left: 10px; }
-  .inspiration-section {
-    background-color:#FCF8F3; /* Aapka bataya hua color */
-    padding: 80px 0;
-    color:black;
-    overflow: hidden;
-  }
-
-  .inspire-title {
-    font-size: 2rem;
-    font-weight: 800;
-    line-height: 1.2;
-    margin-bottom: 20px;
-  }
-
-  .inspire-btn {
-    background-color: #B88E2F !important;
-    color: white !important;
-    border: none;
-    padding: 12px 35px;
+    color: #000;
     font-weight: 600;
-    margin-top: 25px;
     transition: 0.3s;
   }
 
-  /* Right Side Image Layout */
-  .img-wrapper {
-    position: relative;
+  .footer-links a:hover {
+    color: #B88E2F;
   }
 
-  .main-inspire-img {
-    width: 100%;
-    height: 500px;
-    object-fit: cover;
-  }
-
-  /* Floating Box on Image */
-  .info-box {
-    position: absolute;
-    bottom: 30px;
-    left: 30px;
-    background: rgba(255, 255, 255, 0.9);
-    padding: 25px;
-    color: #333;
-    display: flex;
-    align-items: flex-end;
-  }
-
-  .info-content p {
-    margin: 0;
+  /* Newsletter Input Styling */
+  .newsletter-input {
+    border: none;
+    border-bottom: 1px solid #000;
+    padding: 5px 0;
     font-size: 14px;
-    color: #616161;
+    outline: none;
+    width: 200px;
   }
 
-  .info-content h4 {
+  .newsletter-btn {
+    border: none;
+    background: none;
+    border-bottom: 1px solid #000;
     font-weight: 700;
-    margin: 5px 0 0 0;
+    font-size: 14px;
+    margin-left: 10px;
+    padding: 5px 0;
+    text-transform: uppercase;
   }
 
-  .arrow-box {
-    background-color: #B88E2F;
-    color: white;
-    padding: 10px 15px;
-    margin-left: 20px;
-    cursor: pointer;
+  .footer-bottom {
+    margin-top: 40px;
+    padding-top: 30px;
+    border-top: 1px solid #D8D8D8;
+    color: #000;
+    font-size: 16px;
   }
-
-  /* Slider Dots */
-  .slider-dots {
-    display: flex;
-    gap: 10px;
-    margin-top: 20px;
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .big-heading {
+    font-size: 2.5rem;
   }
-
-  .dot {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background-color: #D8D8D8;
-    cursor: pointer;
+  .arrival-box {
+    padding: 30px;
+    margin: 20px;
   }
-
-  .dot.active {
-    background-color: #B88E2F;
-    border: 2px solid white;
-    outline: 1px solid #B88E2F;
+}
+@media (max-width: 768px) {
+  .gallery-flex {
+    flex-wrap: wrap;
   }
-
-  .next-img-preview {
-    width: 100%;
-    height: 400px;
-    object-fit: cover;
-    opacity: 0.7;
+  .gallery-col {
+    flex: 0 0 45%;
   }
-
-  /* Responsive Adjustments */
-  @media (max-width: 768px) {
-    .big-heading { font-size: 2.5rem; }
-    .arrival-box { padding: 30px; margin: 20px; }
-  }
+}
